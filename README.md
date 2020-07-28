@@ -15,7 +15,7 @@ This project was built as a Wave 3 [Filecoin dev grant](https://github.com/filec
    - Deal ID
    - Miner ID
    - Sector number
-   - State
+   - Status
 3. Search a record by a Piece CID, Deal ID, or Miner ID (by Payload / Data CID is a future feature)
 4. Click on a chosen record and see other related details
 
