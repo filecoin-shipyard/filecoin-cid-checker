@@ -16,7 +16,7 @@ export const truncateStringInTheMiddle = (
     }
     return str
   } catch (e) {
-    console.error(e)
+    // ignore error
   }
 }
 
