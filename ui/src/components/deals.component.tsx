@@ -70,6 +70,11 @@ const THButton = styled.button`
   color: inherit;
   outline: none;
   background-color: rgba(0, 0, 0, 0);
+
+  :disabled {
+    opacity: 0.6;
+    cursor: pointer;
+  }
 `
 
 const ShowMoreButton = styled(Button)`
@@ -155,7 +160,7 @@ export const Deals = () => {
                 <tr>
                   <THFirst>{DealTitles.PieceCID}</THFirst>
                   <THSecond>
-                    <THButton onClick={onStateClick}>
+                    <THButton disabled={RemoteData.is.reloading(deals)} onClick={onStateClick}>
                       {DealTitles.State}
                       <DownArrowFilledIcon
                         style={{
@@ -166,7 +171,7 @@ export const Deals = () => {
                     </THButton>
                   </THSecond>
                   <THThird>
-                    <THButton onClick={onDealIdClick}>
+                    <THButton disabled={RemoteData.is.reloading(deals)} onClick={onDealIdClick}>
                       {DealTitles.DealID}
                       <DownArrowFilledIcon style={{ opacity: query ? 0.2 : 1 }} />
                     </THButton>
