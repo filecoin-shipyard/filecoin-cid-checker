@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { ModalWrapper } from './modalWrapper.component'
 import { DealDetails, DealTitles, DealValue } from '../utils/types'
 import { DealStatusIcon } from './dealStatusIcon.component'
-import { fetchDealDetails, truncateStringInTheMiddle} from '../utils/deals'
+import { fetchDealDetails, truncateStringInTheMiddle } from '../utils/deals'
 import { Button } from './button.component'
 import { CopyText } from './copyText.component'
 import { ShareDeal } from './shareDeal.component'
@@ -75,7 +75,9 @@ export const DealDetailModal = (props: Props) => {
         try {
           const details = await fetchDealDetails(`${deal.DealID}`)
           setDealDetails(details)
-        } catch {}
+        } catch {
+          // ignore errors
+        }
       }
     }
     setDealDetails(undefined)
