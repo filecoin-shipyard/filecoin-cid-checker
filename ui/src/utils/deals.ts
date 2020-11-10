@@ -20,14 +20,18 @@ export const truncateStringInTheMiddle = (
   }
 }
 
-export const fetchDeals = async (search: string, page: number, query: string): Promise<DealValue[]> => {
+export const fetchDeals = async (
+  search: string,
+  page: number,
+  query: string,
+): Promise<DealValue[]> => {
   let url = `${FILECOIN_CID_CHECKER_API}deals?page=${page}&per_page=${PAGE_SIZE}`
 
   if (search) {
     url = `${FILECOIN_CID_CHECKER_API}deals/${search}?page=${page}&per_page=${PAGE_SIZE}`
   }
 
-  url = url + query;
+  url = url + query
   const response = await fetch(url)
   const data = await response.json()
 
