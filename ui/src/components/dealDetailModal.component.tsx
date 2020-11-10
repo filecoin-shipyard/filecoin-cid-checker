@@ -71,7 +71,7 @@ export const DealDetailModal = (props: Props) => {
 
   useEffect(() => {
     async function run() {
-      if (deal && deal.DealID) {
+      if (deal && deal.DealID && isOpen) {
         try {
           const details = await fetchDealDetails(`${deal.DealID}`)
           setDealDetails(details)
@@ -82,7 +82,7 @@ export const DealDetailModal = (props: Props) => {
     }
     setDealDetails(undefined)
     run()
-  }, [deal])
+  }, [deal, isOpen])
 
   if (!deal) {
     return null
