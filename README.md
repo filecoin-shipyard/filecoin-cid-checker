@@ -1,5 +1,11 @@
 # Filecoin CID checker and Storage Oracle
 
+## Status
+
+This repository is in a **frozen** state. It is not being maintained or kept in sync with the tools and libraries it builds on. Even though work on this repository has been **shelved**, anyone interested in updating or maintaining this project should express their interest on one Filecoin community conversation mediums: <https://github.com/filecoin-project/community#join-the-community>.
+
+---
+
 - [Introduction](#Introduction)
 - [User Starting Guide](#User-starting-guide)
 - [Deployment](#Deployment)
